@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 emails = []
 50.times do |i|
-  emails.append("jean.dupont.%02d@email.fr" % i)
+  emails << 'jean.dupont.%02d@email.fr' % i
 end
 
-odd_emails = emails.select { |e| e.split('.')[2].split('@').first.to_i.even? }
+odd_emails = emails.select.with_index { |_value, i| i.odd? }
 
 puts odd_emails
 

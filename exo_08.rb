@@ -1,6 +1,8 @@
-puts "countdown: "
+# frozen_string_literal: true
+
+puts 'countdown: '
 number = gets.chomp.to_i
-number.times do |i|
-  puts number - i
+number.downto(0) do |i|
+  puts i
 end
 
