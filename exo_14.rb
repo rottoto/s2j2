@@ -5,7 +5,7 @@ emails = []
   emails << 'jean.dupont.%02d@email.fr' % i
 end
 
-odd_emails = emails.select.with_index { |_value, i| i.odd? }
+even_emails = emails.select.with_index { |_value, i| i.even? }
 
-puts odd_emails
+puts even_emails
 
